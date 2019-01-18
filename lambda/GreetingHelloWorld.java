@@ -7,6 +7,8 @@ public class GreetingHelloWorld implements Greeting {
 		// TODO Auto-generated method stub
 		System.out.println("hi");
 	}
+
+
 	
 	
 	

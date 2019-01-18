@@ -8,15 +8,18 @@ public class Greeter {
 	}
 	
 	public static void main(String[] args) {
-		Greeter greeter = new Greeter();
-		Greeting ghw = new GreetingHelloWorld();
-		greeter.greet(ghw);
 		
-		MyLambda lmb = () -> System.out.println();
+		Greeting greeting = new GreetingHelloWorld();
+		Greeting lmb = () -> System.out.println("HI");
+		
+		Greeting innerClassGreeting = new Greeting() {
+			public void perform() {
+				System.out.println("HI asdf");
+			}
+		};
+		
+		
+		lmb.perform();
 	}
 	
-}
-
-interface MyLambda{
-	void foo();
 }
